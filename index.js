@@ -20,30 +20,45 @@ function carConteudo(){
     for(i = 0; i<3;i++){
         /*alert(i+'='+listaNumero[arrUnique[i]])*/
         /*a trás das cartas*/
+        var jqk= "";
+
+        var inverter= (Math.floor(Math.random()*10));
+        alert(inverter)
+        if(inverter >5){
         newhtml += "<div class='campo'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
-       /*a frente das cartas e suas cores e naipe*/ 
+        }
+        else if(inverter < 6){
+            newhtml += "<div class='campo'style='transform: rotate(180deg);'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
+       
+        }
+        /*a frente das cartas e suas cores e naipe*/ 
        /*alert(listaNumero[arrUnique[i]])
        var brasao =""/*espadas (♠), paus (♣), copas (♥) e ouros (♦).*/
        if (listaNumero[arrUnique[i]].substr(0,1) === 'c'){
         brasao ="♥";newhtml+= "<div class='front' style='color:red'>"
+        jqk="card/copas/"
        }
        else if ( listaNumero[arrUnique[i]].substr(0,1) === 'o'){
         brasao ="♦";newhtml+= "<div class='front' style='color:red'>"
+        jqk="card/ouros/"
        }
        if (listaNumero[arrUnique[i]].substr(0, 1) === 'e'){
         brasao ="♠";newhtml+= "<div class='front' style='color:black'>"
+        jqk="card/espadas/"
        }
        else if ( listaNumero[arrUnique[i]].substr(0,1) === 'p'){
         brasao ="♣";newhtml+= "<div class='front' style='color:black'>"
+        jqk="card/paus/"
        }
 
        /*Topo NUMERO E TIPO das cartas */
        if (listaNumero[arrUnique[i]].substr(1,2) != 'x'){
-        newhtml+= " <div class='quebrar_valor'><p class='valor'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p><p class='brasao_valor'>"+brasao+"</p> </div><br></br>  "/*!=10*/
-       }
-       else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
-        newhtml+= " <div class='quebrar_valor'><p class='valor'>"+10+"</p><p class='brasao_valor'>"+brasao+"</p> </div><br></br>  "/*!=10*/
-       }
+        newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+    }
+   else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
+    newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>10</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+        }
+    
     
 
     newhtml+="<div class='brasao'>"
@@ -57,20 +72,26 @@ function carConteudo(){
     else if(listaNumero[arrUnique[i]].substr(1,2) == '8'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
     else if(listaNumero[arrUnique[i]].substr(1,2) == '9'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'></p>"+brasao+"<p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
     else if(listaNumero[arrUnique[i]].substr(1,2) == 'x'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'J'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'Q'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'K'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
+    else if(listaNumero[arrUnique[i]].substr(1,2) == 'J'){newhtml+="<img class='b5' src='"+jqk+"v.bmp'>"}
+    else if(listaNumero[arrUnique[i]].substr(1,2) == 'Q'){newhtml+="<img class='b5' src='"+jqk+"ra.bmp'>"}
+    else if(listaNumero[arrUnique[i]].substr(1,2) == 'K'){newhtml+="<img class='b5' src='"+jqk+"re.bmp'>"}
     
     /*Pé NUMERO E TIPO das cartas */
     if (listaNumero[arrUnique[i]].substr(1,2) != 'x'){
-        newhtml+= "</div><br><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p></div></div></div></div></label></div>"
+        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p></div></div></div></div></label></div></div>"
+
+
         }
    else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
-        newhtml+= "</div><br><div class='valor_down' ><div class='quebrar_valor'><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+10+"</p></div></div></div></div></label></div>"
+        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>10</p></div></div></div></div></label></div></div>"
         }
     }
     newhtml+="</div>"/*mesa*/
     /*alert(newhtml)*/
     /*console.log(newhtml)*/
+    let newcss = document.getElementById("Deck");
+    newcss.style.cssText= 'display:none;';
+
+
     document.getElementById("carta").innerHTML = newhtml
 }

@@ -1,156 +1,25 @@
 body{
-    margin:10%;
+    
     display:flex;
+    flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
     background: rgb(11, 9, 17);
 }
-/*
-@media only screen and (max-width: 1250px) {
-    .flip-container {
-        width:250px;
-        height:450px;
-        perspective: 1000px;
-    
-    }
-    .front img{
-        width:300px;
-        height:450px;
-    }
-    .back img{
-
-        width:300px;
-        height:450px;
-    }
-    .campo{
-        width:300px;
-        height: 450px;
-        gap:15%;
-    }
-
-
-    .brasao{
-        margin-top: 30%;
-        margin-bottom: 42%;
-    }
-    .front p{
-        font-size: x-large;
-    }
-
-
-
-  }
-  @media only screen and (max-width: 920px) {
-    .flip-container {
-        width:250px;
-        height:400px;
-        perspective: 1000px;
-    
-    }
-    .front img{
-        width:250px;
-        height:400px;
-    }
-    .back img{
-
-        width:250px;
-        height:400px;
-    }
-    .campo{
-        width:250px;
-        height:400px;
-    }
-
-    .brasao{
-        margin-top: 25%;
-        margin-bottom: 42%;
-    }
-    .front p{
-        font-size: x-large;
-    }
-
-
-  }
-  @media only screen and (max-width: 788px) {
-    .flip-container {
-        width:200px;
-        height:350px;
-        perspective: 1000px;
-    
-    }
-    .front img{
-        width:200px;
-        height:350px;
-    }
-    .back img{
-
-        width:200px;
-        height:350px;
-    }
-    .campo{
-        width:200px;
-        height:350px;
-    }
-    .brasao{
-        font-size: x-large;
-        margin-top: 20%;
-        margin-bottom: 42%;
-    }
-  }
-  @media only screen and (max-width: 666px) {
-    .flip-container {
-        width:250px;
-        height:450px;
-        perspective: 1000px;
-    
-    }
-    .front img{
-        width:175px;
-        height:325px;
-    }
-    .back img{
-
-        width:175px;
-        height:325px;
-    }
-    .campo{
-        width:175px;
-        height:325px;
-    }
-  }
-@media only screen and (min-width: 1240px) {
-    .flip-container {
-        width:300px;
-        height:500px;
-        perspective: 1000px;
-    
-    }
-    .front img{
-        width:400px;
-        height:550px;
-    }
-    .back img{
-
-        width:400px;
-        height:550px;
-    }
-    .campo{
-        width:400px;
-        height: 550px;
-    }
-    .brasao{
-        margin-top: 25%;
-        margin-bottom: 42%;
-    }
-    .front p{
-        font-size: xx-large;
-    }
-  }
-
-
-*/
-
-
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center ;
+    align-items: center;
+}
+#carta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
 .flip-container {
     width:250px;
     height:450px;
@@ -171,12 +40,13 @@ body{
     height: 450px;
 
 }
-.brasao{
-    margin-top: 25%;
-    margin-bottom: 42%;
+
+img.b5{
+    display: flex;
+    width: 170px;
+    height: 250px;  
+
 }
-
-
 .flipper{
     position: relative;
     width:100%;
@@ -187,10 +57,10 @@ body{
 .front{
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    font-size: x-large;
+    justify-content:space-between;
+    font-size: xx-large;
     align-items:stretch;
-    box-shadow: rgba(241, 111, 111, 0.911) 0px 25px 20px -20px;position: absolute;
+    box-shadow: rgba(100, 212, 246, 0.911) 0px 25px 20px -20px;position: absolute;
 	transform: rotateY(180deg);
     background-color: aliceblue;
     border-radius: 5%;
@@ -253,11 +123,11 @@ body{
     
 }
 .valor_up {
-    height:0px;
+    height:25px;
     display:flex;
     flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
 
 }
@@ -267,11 +137,11 @@ body{
 
 }
 .valor_down{
-    height:25px;
+
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
 
 }
@@ -295,10 +165,10 @@ body{
     display:flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: nowrap;
+
 }
 .l_brasao p{
-    margin:2%;
+    margin:0%;
 }
 .front{color:red;}
 
@@ -308,3 +178,27 @@ transform: rotate(180deg);
 }
 #deck{display: flex;
 justify-content: center;}
+
+
+.brasao{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+div.brasao p{
+    gap:15px;
+}
+
+button{display:none;}
+
+.deck:checked .deck{
+    display:none;
+}
+#Deck:hover{
+    cursor:pointer;
+}
+.mesa:hover{
+    cursor:pointer;
+}

@@ -56,8 +56,11 @@
 
                         </div><br>
                         <div class="valor_down">
-                            <div class="quebrar_valor" id='inverter'><p>4</p><p class="brasao_valor">♣</p></div><br><br>
+                            <div class="quebrar_valor" id='inverter'>
+                                <p>4</p>
+                                <p class="brasao_valor">♣</p>
                             </div>
+                        </div>
     
                     </div>
 
@@ -82,48 +85,25 @@
                 </label>
             </div>            
         </div>-->
-        <br>        
+      
+        <section>
+        <div onclick="carConteudo()" id="Deck">
+            <button onclick="carConteudo()">Carregue</button>
+            <div class="deck" >
+                <img src="card/deck.png" style="width:350px;height:450px;">
 
-
-        <!--<div class="deck" >
-
-            <div >
-                <label style=" padding-left:1%;" >
-                        <div class="flipper">
-                            <div class="back">
-                                <img src="card/back2.png" />
-                            </div>
-                        </div>
-                </label>
-                <label style=" padding-left:1.5%;" >
-                    <div class="flipper">
-                        <div class="back">
-                            <img src="card/back2.png" />
-                        </div>
-                    </div>
-            </label>
-            <label style=" padding-left:10%;" >
-                <div class="flipper">
-                    <div class="back">
-                        <img src="card/back2.png" />
-                    </div>
-                </div>
-        </label>
-        <label style=" padding-left:1%;" >
-            <div class="flipper">
-                <div class="back">
-                    <img src="card/back2.png" />
-                </div>
             </div>
-    </label>
-            </div>
-
-
-        </div>-->
-        <button onclick="carConteudo()">Carregue</button>
+            <scripts type="text/javascript" src="js.js"></scripts>
+        </div>
+        <div>
         <action id="carta"></action>
+        </div>
         <script src="index.js"></script>
+        </section>
     </main>
 </body>
 <scripts type="text/javascript" src="js.js"></scripts>
 </html>
+
+
+
