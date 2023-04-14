@@ -5,7 +5,7 @@ body{
     flex-wrap: wrap;
     background: rgb(11, 9, 17);
 }
-
+/*
 @media only screen and (max-width: 1250px) {
     .flip-container {
         width:250px;
@@ -148,6 +148,33 @@ body{
   }
 
 
+*/
+
+
+.flip-container {
+    width:250px;
+    height:450px;
+    perspective: 1000px;
+
+}
+.front img{
+    width:300px;
+    height:450px;
+}
+.back img{
+
+    width:300px;
+    height:450px;
+}
+.campo{
+    width:300px;
+    height: 450px;
+
+}
+.brasao{
+    margin-top: 25%;
+    margin-bottom: 42%;
+}
 
 
 .flipper{
@@ -161,7 +188,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:center;
-
+    font-size: x-large;
+    align-items:stretch;
     box-shadow: rgba(241, 111, 111, 0.911) 0px 25px 20px -20px;position: absolute;
 	transform: rotateY(180deg);
     background-color: aliceblue;
@@ -225,7 +253,7 @@ body{
     
 }
 .valor_up {
-    height:20px;
+    height:0px;
     display:flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -233,24 +261,25 @@ body{
 
 
 }
+.quebrar_valor p{
+    align-items: center;
+    margin:0%;
+
+}
 .valor_down{
-    height:20px;
+    height:25px;
     display:flex;
     flex-direction: row;
     justify-content: flex-end;
     flex-wrap: nowrap;
-    margin-bottom: 15%;
+
 
 }
 .quebrar_valor{
     margin-left: 5%;
     margin-right: 5%;
 }
-.valor_up p{
-    align-items: center;
-    margin:0%;
 
-}
 .valor_down p{
     margin:0%;
 }
