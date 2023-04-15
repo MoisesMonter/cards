@@ -10,97 +10,33 @@
 
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Tarot</h1>
+        <p>Descubra aqui o que as cartas lhe dizem</p>
+    </header>
     <main>
-
-       <!-- <div class="mesa">
-
-            <div class="campo">
-            <input type="checkbox" id="card-0" />
-            <label class="flip-container-0"  for="card-0">
-                    <div class="flipper">
-
-                        <div class="back">
-                            <img src="card/back2.png" />
-                        </div>
-
-                        <div class="front">
-                            <img src="https://picsum.photos/id/411/300/200" />
-                        </div>
-
-                    </div>
-            </label>
-            </div>
-
-            <div class="campo">
-            <input type="checkbox" id="card-1" />
-            <label class="flip-container-1"  for="card-1">
-                <div class="flipper">
-
-                    <div class="back">
-                        <img src="card/back2.png" />
-                    </div>
-
-                    <div class="front">
-                        <div class="valor_up"><br>
-                            <div class="quebrar_valor"><p class="valor">4</p>
-                                <p class="brasao_valor">♣</p> </div><br>
-                      
-                        </div>
-
-                        <div class="brasao">
-
-                            <div class="l_brasao"><p class="b1">♣</p><p class="b2"></p><p class="b3">♣</p></div>
-                            <div class="l_brasao"><p class="b4"></p><p class="6"></p><p class="b7"></p></div>
-                            <div class="l_brasao" id='inverter'><p class="b8">♣</p><p class="b9"></p><p class="b10">♣</p></div>
-
-                        </div><br>
-                        <div class="valor_down">
-                            <div class="quebrar_valor" id='inverter'>
-                                <p>4</p>
-                                <p class="brasao_valor">♣</p>
-                            </div>
-                        </div>
-    
-                    </div>
-
-                </div>
-            </label>
-            </div>
-
-            <div class="campo">
-                <input type="checkbox" id="card-3" />
-                <label class="flip-container-3"  for="card-3">
-                    <div class="flipper">
-    
-                        <div class="back">
-                            <img src="card/back2.png" />
-                        </div>
-    
-                        <div class="front">
-                            <img src="https://picsum.photos/id/411/300/200" />
-                        </div>
-    
-                    </div>
-                </label>
-            </div>            
-        </div>-->
-      
         <section>
+
+            <input type="number" id="quant" name="quant" 
+            min="1" max="10">
         <div onclick="carConteudo()" id="Deck">
-            <button onclick="carConteudo()">Carregue</button>
+
+            <button onclick="carConteudo()" id="carConteudo">Carregue</button>
             <div class="deck" >
                 <img src="card/deck.png" style="width:350px;height:450px;">
-
             </div>
             <scripts type="text/javascript" src="js.js"></scripts>
         </div>
         <div>
+
         <action id="carta"></action>
         </div>
         <script src="index.js"></script>
         </section>
     </main>
+    <main2>
+    <button onclick="back()" id="back">Embaralhe</button>
+</main2>
 </body>
 <scripts type="text/javascript" src="js.js"></scripts>
 </html>

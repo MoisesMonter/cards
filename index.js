@@ -17,7 +17,11 @@ function carConteudo(){
     newhtml+="<div class='mesa'>"
     /*alert(newlista)*/
     /*alert(arrUnique)*/
-    for(i = 0; i<3;i++){
+
+    /*quantas cartas */
+    let valor = document.querySelector("#quant");
+    alert(valor)
+    for(i = 0; i<5;i++){
         /*alert(i+'='+listaNumero[arrUnique[i]])*/
         /*a trás das cartas*/
         var jqk= "";
@@ -91,7 +95,17 @@ function carConteudo(){
     /*console.log(newhtml)*/
     let newcss = document.getElementById("Deck");
     newcss.style.cssText= 'display:none;';
-
-
+    let carta = document.getElementById("carta");
+    carta.style.cssText = 'display:flex;'
+    let embaralhe = document.getElementById("back")
+    embaralhe.style.cssText= 'display:flex;'
     document.getElementById("carta").innerHTML = newhtml
+}
+
+function back(){
+    let mesa = document.getElementById("Deck");
+    mesa.style.cssText ='display:flex;'
+    let carta = document.getElementById("carta");
+    carta.style.cssText = 'display:none;'
+
 }

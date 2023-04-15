@@ -1,16 +1,37 @@
 body{
     
     display:flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
     width: 100%;
     height: 100%;
     background: rgb(11, 9, 17);
 }
+header{
+    border: solid 2px;
+    border-bottom-left-radius: 75px ;
+    border-top-right-radius:75px ;
+    border-color: rgb(8, 8, 8);
+    margin: 0%;
+    padding:0%;
+    background: linear-gradient(rgb(61, 19, 188),rgb(4, 4, 136));
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    color:aliceblue;
+    align-items: center;
+}
+header h1,p{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 main{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content:center ;
     align-items: center;
 }
@@ -87,20 +108,7 @@ img.b5{
     border:2px solid rgb(221, 182, 7);
 
 }
-#card-0:checked ~ .flip-container-0 .flipper {
-    transform: rotateY(180deg);
-}
-#card-1:checked ~ .flip-container-1 .flipper {
-    
-    transform: rotateY(180deg);
-}
-#card-2:checked ~ .flip-container-2 .flipper {
-    
-    transform: rotateY(180deg);
-}
-  #card-0,#card-1,#card-2{
-	display: none;
-}
+
 
 .mesa{
     display:flex;
@@ -110,7 +118,7 @@ img.b5{
 }
 
 .deck{
-    width:50px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,8 +199,8 @@ div.brasao p{
     gap:15px;
 }
 
-button{display:none;}
-
+#carConteudo{display:none;}
+#back{display:none;}
 .deck:checked .deck{
     display:none;
 }
@@ -202,3 +210,114 @@ button{display:none;}
 .mesa:hover{
     cursor:pointer;
 }
+
+
+
+#card-0:checked ~ .flip-container-0 .flipper {transform: rotateY(180deg);}
+#card-0{display: none;}
+#card-1:checked ~ .flip-container-1 .flipper {transform: rotateY(180deg);}
+#card-1{display: none;}
+#card-2:checked ~ .flip-container-2 .flipper {transform: rotateY(180deg);}
+#card-2{display: none;}
+#card-3:checked ~ .flip-container-3 .flipper {transform: rotateY(180deg);}
+#card-3{display: none;}
+#card-4:checked ~ .flip-container-4 .flipper {transform: rotateY(180deg);}
+#card-4{display: none;}
+#card-5:checked ~ .flip-container-5 .flipper {transform: rotateY(180deg);}
+#card-5{display: none;}
+#card-6:checked ~ .flip-container-6 .flipper {transform: rotateY(180deg);}
+#card-6{display: none;}
+#card-7:checked ~ .flip-container-7 .flipper {transform: rotateY(180deg);}
+#card-7{display: none;}
+#card-8:checked ~ .flip-container-8 .flipper {transform: rotateY(180deg);}
+#card-8{display: none;}
+#card-9:checked ~ .flip-container-9 .flipper {transform: rotateY(180deg);}
+#card-9{display: none;}
+#card-10:checked ~ .flip-container-10 .flipper {transform: rotateY(180deg);}
+#card-10{display: none;}
+#card-11:checked ~ .flip-container-11 .flipper {transform: rotateY(180deg);}
+#card-11{display: none;}
+#card-12:checked ~ .flip-container-12 .flipper {transform: rotateY(180deg);}
+#card-12{display: none;}
+#card-13:checked ~ .flip-container-13 .flipper {transform: rotateY(180deg);}
+#card-13{display: none;}
+#card-14:checked ~ .flip-container-14 .flipper {transform: rotateY(180deg);}
+#card-14{display: none;}
+#card-15:checked ~ .flip-container-15 .flipper {transform: rotateY(180deg);}
+#card-15{display: none;}
+#card-16:checked ~ .flip-container-16 .flipper {transform: rotateY(180deg);}
+#card-16{display: none;}
+#card-17:checked ~ .flip-container-17 .flipper {transform: rotateY(180deg);}
+#card-17{display: none;}
+#card-18:checked ~ .flip-container-18 .flipper {transform: rotateY(180deg);}
+#card-18{display: none;}
+#card-19:checked ~ .flip-container-19 .flipper {transform: rotateY(180deg);}
+#card-19{display: none;}
+#card-20:checked ~ .flip-container-20 .flipper {transform: rotateY(180deg);}
+#card-20{display: none;}
+#card-21:checked ~ .flip-container-21 .flipper {transform: rotateY(180deg);}
+#card-21{display: none;}
+#card-22:checked ~ .flip-container-22 .flipper {transform: rotateY(180deg);}
+#card-22{display: none;}
+#card-23:checked ~ .flip-container-23 .flipper {transform: rotateY(180deg);}
+#card-23{display: none;}
+#card-24:checked ~ .flip-container-24 .flipper {transform: rotateY(180deg);}
+#card-24{display: none;}
+#card-25:checked ~ .flip-container-25 .flipper {transform: rotateY(180deg);}
+#card-25{display: none;}
+#card-26:checked ~ .flip-container-26 .flipper {transform: rotateY(180deg);}
+#card-26{display: none;}
+#card-27:checked ~ .flip-container-27 .flipper {transform: rotateY(180deg);}
+#card-27{display: none;}
+#card-28:checked ~ .flip-container-28 .flipper {transform: rotateY(180deg);}
+#card-28{display: none;}
+#card-29:checked ~ .flip-container-29 .flipper {transform: rotateY(180deg);}
+#card-29{display: none;}
+#card-30:checked ~ .flip-container-30 .flipper {transform: rotateY(180deg);}
+#card-30{display: none;}
+#card-31:checked ~ .flip-container-31 .flipper {transform: rotateY(180deg);}
+#card-31{display: none;}
+#card-32:checked ~ .flip-container-32 .flipper {transform: rotateY(180deg);}
+#card-32{display: none;}
+#card-33:checked ~ .flip-container-33 .flipper {transform: rotateY(180deg);}
+#card-33{display: none;}
+#card-34:checked ~ .flip-container-34 .flipper {transform: rotateY(180deg);}
+#card-34{display: none;}
+#card-35:checked ~ .flip-container-35 .flipper {transform: rotateY(180deg);}
+#card-35{display: none;}
+#card-36:checked ~ .flip-container-36 .flipper {transform: rotateY(180deg);}
+#card-36{display: none;}
+#card-37:checked ~ .flip-container-37 .flipper {transform: rotateY(180deg);}
+#card-37{display: none;}
+#card-38:checked ~ .flip-container-38 .flipper {transform: rotateY(180deg);}
+#card-38{display: none;}
+#card-39:checked ~ .flip-container-39 .flipper {transform: rotateY(180deg);}
+#card-39{display: none;}
+#card-40:checked ~ .flip-container-40 .flipper {transform: rotateY(180deg);}
+#card-40{display: none;}
+#card-41:checked ~ .flip-container-41 .flipper {transform: rotateY(180deg);}
+#card-41{display: none;}
+#card-42:checked ~ .flip-container-42 .flipper {transform: rotateY(180deg);}
+#card-42{display: none;}
+#card-43:checked ~ .flip-container-43 .flipper {transform: rotateY(180deg);}
+#card-43{display: none;}
+#card-44:checked ~ .flip-container-44 .flipper {transform: rotateY(180deg);}
+#card-44{display: none;}
+#card-45:checked ~ .flip-container-45 .flipper {transform: rotateY(180deg);}
+#card-45{display: none;}
+#card-46:checked ~ .flip-container-46 .flipper {transform: rotateY(180deg);}
+#card-46{display: none;}
+#card-47:checked ~ .flip-container-47 .flipper {transform: rotateY(180deg);}
+#card-47{display: none;}
+#card-48:checked ~ .flip-container-48 .flipper {transform: rotateY(180deg);}
+#card-48{display: none;}
+#card-49:checked ~ .flip-container-49 .flipper {transform: rotateY(180deg);}
+#card-49{display: none;}
+#card-50:checked ~ .flip-container-50 .flipper {transform: rotateY(180deg);}
+#card-50{display: none;}
+#card-51:checked ~ .flip-container-51 .flipper {transform: rotateY(180deg);}
+#card-51{display: none;}
+#card-52:checked ~ .flip-container-52 .flipper {transform: rotateY(180deg);}
+#card-52{display: none;}
+#card-53:checked ~ .flip-container-53 .flipper {transform: rotateY(180deg);}
+#card-53{display: none;}
