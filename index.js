@@ -26,7 +26,7 @@ function carConteudo(){
         valor = 3;
         alert("valor baixo de mais, padrão 3 cartas entregues!");
     }
-    else if(valor>15){
+    else if(valor>0){
         if (valor != 666){
             valor = 3;
             alert(" apenas 10 para baixo, padrão 3 cartas entregues");
@@ -40,8 +40,8 @@ function carConteudo(){
             newhtml+="<div class='brasao'>"
             newhtml+="<img class='b5' src='card/capeteemo.jpg'>"
             /*Pé NUMERO E TIPO das cartas */
-            newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+666+"</p></div></div></div></div></label></div></div>"
-
+            newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+666+"</p></div></div></div></div></label></div></div><p class='capetoso'>Ousado serás ao virar esta maldita carta, pois mal tu sabes ó ser enfermo de curiosidades, que terás que purificar tua alma, já que o corrompido te olhas de volta com total intensidade CAPETOSA!!!!</p>"
+            
         }
 
     }
