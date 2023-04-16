@@ -23,76 +23,96 @@ function carConteudo(){
     /*quantas cartas */
     var valor = document.getElementById("quant").value;
 
-    if (valor <1){
-        valor = 3;
-        alert("valor baixo de mais, padrão 3 cartas entregues!")
-    }
-    for(i = 0; i<valor;i++){
-        /*alert(i+'='+listaNumero[arrUnique[i]])*/
-        /*a trás das cartas*/
-        var jqk= "";
 
-        var inverter= (Math.floor(Math.random()*10));
-        if(inverter >5){
+    if (valor == 666){
+        alert(" opss! você invocou a carta proibida! 😱😱😱!!!");
         newhtml += "<div class='campo'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
-        }
-        else if(inverter < 6){
-            newhtml += "<div class='campo'style='transform: rotate(180deg);'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
-       
-        }
-        /*a frente das cartas e suas cores e naipe*/ 
-       /*alert(listaNumero[arrUnique[i]])
-       var brasao =""/*espadas (♠), paus (♣), copas (♥) e ouros (♦).*/
-       if (listaNumero[arrUnique[i]].substr(0,1) === 'c'){
-        brasao ="♥";newhtml+= "<div class='front' style='color:red'>"
-        jqk="card/copas/"
-       }
-       else if ( listaNumero[arrUnique[i]].substr(0,1) === 'o'){
-        brasao ="♦";newhtml+= "<div class='front' style='color:red'>"
-        jqk="card/ouros/"
-       }
-       if (listaNumero[arrUnique[i]].substr(0, 1) === 'e'){
-        brasao ="♠";newhtml+= "<div class='front' style='color:black'>"
-        jqk="card/espadas/"
-       }
-       else if ( listaNumero[arrUnique[i]].substr(0,1) === 'p'){
-        brasao ="♣";newhtml+= "<div class='front' style='color:black'>"
-        jqk="card/paus/"
-       }
-
-       /*Topo NUMERO E TIPO das cartas */
-       if (listaNumero[arrUnique[i]].substr(1,2) != 'x'){
-        newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+        brasao ="🔥";newhtml+= "<div class='front' style='color:red; background-color:black;'>"
+        /*Topo NUMERO E TIPO das cartas */
+        newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>"+666+"</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+        newhtml+="<div class='brasao'>"
+        newhtml+="<img class='b5' src='card/capeteemo.jpg'>"
+        /*Pé NUMERO E TIPO das cartas */
+        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+666+"</p></div></div></div></div></label></div></div>"
     }
-   else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
-    newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>10</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+    else{
+        if (valor <1){
+            valor = 3;
+            alert("valor baixo de mais, padrão 3 cartas entregues!");
         }
-    
-    
-
-    newhtml+="<div class='brasao'>"
-    if(listaNumero[arrUnique[i]].substr(1,2) == 'A'){newhtml+="<div class='l_brasao'><p class='b1'></p><p class='b2'></p><p class='b3'></p></div><div class='l_brasao'><p class='b4'></p><p class='b5' style='font-size: 70px;'>"+brasao+"</p><p class='6'></p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'></p><p class='b9'></p><p class='b10'></p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '2'){newhtml+="<div class='l_brasao'><p class='b1'></p><p class='b2'>"+brasao+"</p><p class='b3'></p></div><div class='l_brasao'><p class='b4'></p><p class='b5'></p><p class='6'></p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'></p><p class='b9'>"+brasao+"</p><p class='b10'></p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '3'){newhtml+="<div class='l_brasao'><p class='b1'></p><p class='b2'>"+brasao+"</p><p class='b3'></p></div><div class='l_brasao'><p class='b4'></p></p><p class='5'>"+brasao+"</p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'></p><p class='b9'>"+brasao+"</p><p class='b10'></p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '4'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'></p><p class='b5'></p><p class='6'></p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '5'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'></p><p class='b5'>"+brasao+"</p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '6'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p></p><p class='6'></p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '7'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'></p><p class='6'>"+brasao+"</p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '8'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == '9'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'></p>"+brasao+"<p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'x'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'J'){newhtml+="<img class='b5' src='"+jqk+"v.bmp'>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'Q'){newhtml+="<img class='b5' src='"+jqk+"ra.bmp'>"}
-    else if(listaNumero[arrUnique[i]].substr(1,2) == 'K'){newhtml+="<img class='b5' src='"+jqk+"re.bmp'>"}
-    
-    /*Pé NUMERO E TIPO das cartas */
-    if (listaNumero[arrUnique[i]].substr(1,2) != 'x'){
-        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p></div></div></div></div></label></div></div>"
-
-
+        else if(valor>15){
+            valor = 3;
+            alert(" apenas 15 para baixo, padrão 3 cartas entregues");
         }
-   else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
-        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>10</p></div></div></div></div></label></div></div>"
+
+
+        for(i = 0; i<valor;i++){
+            /*alert(i+'='+listaNumero[arrUnique[i]])*/
+            /*a trás das cartas*/
+            var jqk= "";
+
+            var inverter= (Math.floor(Math.random()*10));
+            if(inverter >5){
+            newhtml += "<div class='campo'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
+            }
+            else if(inverter < 6){
+                newhtml += "<div class='campo'style='transform: rotate(180deg);'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
+        
+            }
+            /*a frente das cartas e suas cores e naipe*/ 
+            /*alert(listaNumero[arrUnique[i]])
+            var brasao =""/*espadas (♠), paus (♣), copas (♥) e ouros (♦).*/
+            if (listaNumero[arrUnique[i]].substr(0,1) === 'c'){
+                brasao ="♥";newhtml+= "<div class='front' style='color:red'>"
+                jqk="card/copas/"
+            }
+            else if ( listaNumero[arrUnique[i]].substr(0,1) === 'o'){
+                brasao ="♦";newhtml+= "<div class='front' style='color:red'>"
+                jqk="card/ouros/"
+            }
+            if (listaNumero[arrUnique[i]].substr(0, 1) === 'e'){
+                brasao ="♠";newhtml+= "<div class='front' style='color:black'>"
+                jqk="card/espadas/"
+            }
+            else if ( listaNumero[arrUnique[i]].substr(0,1) === 'p'){
+                brasao ="♣";newhtml+= "<div class='front' style='color:black'>"
+                jqk="card/paus/"
+            }
+
+            /*Topo NUMERO E TIPO das cartas */
+            if (listaNumero[arrUnique[i]].substr(1,2) != 'x'){
+                newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+            }
+            else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
+            newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>10</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+                }
+        
+        
+
+            newhtml+="<div class='brasao'>"
+            if(listaNumero[arrUnique[i]].substr(1,2) == 'A'){newhtml+="<div class='l_brasao'><p class='b1'></p><p class='b2'></p><p class='b3'></p></div><div class='l_brasao'><p class='b4'></p><p class='b5' style='font-size: 70px;'>"+brasao+"</p><p class='6'></p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'></p><p class='b9'></p><p class='b10'></p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '2'){newhtml+="<div class='l_brasao'><p class='b1'></p><p class='b2'>"+brasao+"</p><p class='b3'></p></div><div class='l_brasao'><p class='b4'></p><p class='b5'></p><p class='6'></p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'></p><p class='b9'>"+brasao+"</p><p class='b10'></p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '3'){newhtml+="<div class='l_brasao'><p class='b1'></p><p class='b2'>"+brasao+"</p><p class='b3'></p></div><div class='l_brasao'><p class='b4'></p></p><p class='5'>"+brasao+"</p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'></p><p class='b9'>"+brasao+"</p><p class='b10'></p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '4'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'></p><p class='b5'></p><p class='6'></p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '5'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'></p><p class='b5'>"+brasao+"</p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '6'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p></p><p class='6'></p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '7'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'></p><p class='6'>"+brasao+"</p><p class='b7'></p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '8'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'></p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == '9'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'></p>"+brasao+"<p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'></p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == 'x'){newhtml+="<div class='l_brasao'><p class='b1'>"+brasao+"</p><p class='b2'>"+brasao+"</p><p class='b3'>"+brasao+"</p></div><div class='l_brasao'><p class='b4'>"+brasao+"</p><p class='b5'>"+brasao+"</p><p class='6'>"+brasao+"</p><p class='b7'>"+brasao+"</p></div><div class='l_brasao' id='inverter'><p class='b8'>"+brasao+"</p><p class='b9'>"+brasao+"</p><p class='b10'>"+brasao+"</p></div>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == 'J'){newhtml+="<img class='b5' src='"+jqk+"v.bmp'>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == 'Q'){newhtml+="<img class='b5' src='"+jqk+"ra.bmp'>"}
+            else if(listaNumero[arrUnique[i]].substr(1,2) == 'K'){newhtml+="<img class='b5' src='"+jqk+"re.bmp'>"}
+        
+            /*Pé NUMERO E TIPO das cartas */
+            if (listaNumero[arrUnique[i]].substr(1,2) != 'x'){
+                newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p></div></div></div></div></label></div></div>"
+
+
+            }
+            else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
+                    newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>10</p></div></div></div></div></label></div></div>"
+                    }
         }
     }
     newhtml+="</div>"/*mesa*/
