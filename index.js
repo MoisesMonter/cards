@@ -16,34 +16,38 @@ function carConteudo(){
         x++;
     }
     const arrUnique = [...new Set(newlista)];
-    
+    newhtml+="<div class='mesa'>"
     /*alert(newlista)*/
     /*alert(arrUnique)*/
 
     /*quantas cartas */
     var valor = document.getElementById("quant").value;
-
-    newhtml+="<div class='mesa'>"
-    if (valor == 666){
-        alert(" opss! você invocou a carta proibida! 😱😱😱!!!");
-        newhtml += "<div class='campo'> <input type='checkbox' id='card-"+6+"' /><label class='flip-container-"+6+"'  for='card-"+6+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
-        brasao ="🔥";newhtml+= "<div class='front' style='color:red; background-color:black;'>"
-        /*Topo NUMERO E TIPO das cartas */
-        newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>"+666+"</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
-        newhtml+="<div class='brasao'>"
-        newhtml+="<img class='b5' src='card/capeteemo.jpg'>"
-        /*Pé NUMERO E TIPO das cartas */
-        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+666+"</p></div></div></div></div></label></div></div>"
+    if (valor <1){
+        valor = 3;
+        alert("valor baixo de mais, padrão 3 cartas entregues!");
     }
-    else{
-        if (valor <1){
+    else if(valor>0){
+        if (valor != 666){
             valor = 3;
-            alert("valor baixo de mais, padrão 3 cartas entregues!");
+            alert(" apenas 10 para baixo, padrão 3 cartas entregues");
         }
-        else if(valor>15){
-            valor = 3;
-            alert(" apenas 15 para baixo, padrão 3 cartas entregues");
+        else{
+            alert(" opss! você invocou a carta proibida! 😱😱😱!!!");
+            newhtml += "<div class='campo'> <input type='checkbox' id='card-"+0+"' /><label class='flip-container-"+0+"'  for='card-"+0+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
+            brasao ="🔥";newhtml+= "<div class='front' style='color:red; background-color:black;'>"
+            /*Topo NUMERO E TIPO das cartas */
+            newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>"+666+"</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+            newhtml+="<div class='brasao'>"
+            newhtml+="<img class='b5' src='card/capeteemo.jpg'>"
+            /*Pé NUMERO E TIPO das cartas */
+            newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+666+"</p></div></div></div></div></label></div></div>"
+
         }
+
+    }
+
+    if (valor != 666){
+
 
 
         for(i = 0; i<valor;i++){
