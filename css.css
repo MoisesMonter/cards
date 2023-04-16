@@ -42,13 +42,7 @@ main{
     align-items: center;
 
 }
-main2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-
-}
 footer{
 
     
@@ -95,7 +89,9 @@ section{
 
 }
 label#inputquant{
-    font-size: 15px;
+
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
 }
 input#quant{
  border-radius: 10px;
