@@ -404,6 +404,16 @@ div.brasao p{
 #card-52{display: none;}
 #card-53:checked ~ .flip-container-53 .flipper {transform: rotateY(180deg);}
 #card-53{display: none;}
+.capetoso{
+    align-items: center;
+    border-radius: 10px;
+    background-color: #00000088;
+    font-size: x-large;
+font-family: monospace;
+text-shadow: 5px 5px 10px #ff0000;
+color: aliceblue;
+text-align: center;
+}
 
 a#eegg {
     color: #20212400;
