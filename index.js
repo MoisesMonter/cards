@@ -40,8 +40,8 @@ else if(valor == 666  || valor ==0903){
         var brasao = "🔥";
         var card_alert=  brasao+"opss! você invocou a carta proibida! 😱😱😱!!!"+brasao;
         var value_card = "666";
-        var img_card = "<img class='b5' src='card/capeteemo.jpg'>";
-        var card_style ="<div style ='margin-top:55px;' class='front' style='color:red; background-color:black;'>";
+        var img_card = "<img style ='margin-top:55px;' class='b5' src='card/capeteemo.jpg'>";
+        var card_style ="<div  class='front' style='color:red; background-color:black;'>";
         var txt_card = "Ousado serás ao virar esta maldita carta, pois mal tu sabes ó ser enfermo de curiosidades, que terás que purificar tua alma, já que o corrompido te olhas de volta com total intensidade CAPETOSA!!!!";
     }
     else if(valor == 0903){
