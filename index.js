@@ -17,8 +17,10 @@ while (x < 50){
 newlista[x]= (Math.floor(Math.random()*53))+1;
 x++;
 }
-const arrUnique = [...new Set(newlista)];
-
+/*const */
+;
+let arrUnique = [...new Set(newlista)];
+/*arrUnique[1] =53 //position*/
 newhtml+="<div class='mesa'>"
 /*alert(newlista)*/
 
@@ -113,8 +115,15 @@ for(i = 0; i<valor;i++){
             jqk="card/paus/"
             break;
         case 'J':
-            brasao ="🃏";newhtml+= "<div class='front' style='color:black'>";
-            jqk="card/coringa/"
+            if ( inverter == 0 || inverter == 1 || inverter == 3 || inverter == 5 || inverter == 7 || inverter == 9){
+               brasao ="🃏";newhtml+= "<div class='front' style='color:black'>"; 
+               jqk="card/coringaep/"
+            }
+            if ( inverter == 2 || inverter == 4 || inverter == 6 || inverter == 8 || inverter == 10 ){
+                brasao ="🃏";newhtml+= "<div class='front' style='color:red'>"; 
+                jqk="card/coringaco/"
+             }
+            
             break;
         default:
             console.log("default Naipe");
@@ -143,7 +152,7 @@ for(i = 0; i<valor;i++){
         newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'>10</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
         }
     if (listaNumero[arrUnique[i]].substr(1,2) == 'c'){
-        newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'><p style='padding-left:5px;'>J</p>O<br>K<br>E<br>R</p><p class='brasao_valor'>"+brasao+"</p> </div>   </div>"
+        newhtml+= "<div class='valor_up'> <div class='quebrar_valor'><p class='valor'><p>J</p>O<br>K<br>E<br>R</p> </div>   </div>"
     }
 
 
@@ -211,13 +220,13 @@ for(i = 0; i<valor;i++){
     else if(listaNumero[arrUnique[i]].substr(1,2) == 'c'){newhtml+="<img style ='margin-top:55px;' class='b5' src='"+jqk+"c.jpg'>"}
     /*Pé NUMERO E TIPO das cartas */
     if (listaNumero[arrUnique[i]].substr(1,2) != 'x' && listaNumero[arrUnique[i]].substr(1,2) != 'c'){
-        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>"+listaNumero[arrUnique[i]].substr(1,2)+"</p></div></div></div></div></label></div></div>"
+        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' id='inverter' ><p>"+listaNumero[arrUnique[i]].substr(1,2)+"</p><p class='brasao_valor'>"+brasao+"</p></div></div></div></div></label></div></div>"
     }
     else if (listaNumero[arrUnique[i]].substr(1,2) == 'x'){
-        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'>10</p></div></div></div></div></label></div></div>"
+        newhtml+= "</div><div class='valor_down' ><div class='quebrar_valor' id='inverter' ><p>10</p><p class='brasao_valor' >"+brasao+"</p></div></div></div></div></label></div></div>"
     }
      if (listaNumero[arrUnique[i]].substr(1,2) == 'c'){
-        newhtml+= "</div><div class='valor_down' style='margin-top:-150px;' ><div class='quebrar_valor' ><p class='brasao_valor' id='inverter'>"+brasao+"</p><p id='inverter'><p style='padding-left:5px;'>J</p>O<br>K<br>E<br>R</p></div></div></div></div></label></div></div>"
+        newhtml+= "</div><div class='valor_down' style='margin-top:-118px;' ><div class='quebrar_valor' id='inverter' ><p><p >J</p>O<br>K<br>E<br>R</p></div></div></div></div></label></div></div>"
     }
 }
 
