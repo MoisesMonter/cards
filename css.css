@@ -223,6 +223,9 @@ action{
 
 }
 .quebrar_valor p{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
     margin:0%;
 
@@ -404,6 +407,8 @@ div.brasao p{
 #card-52{display: none;}
 #card-53:checked ~ .flip-container-53 .flipper {transform: rotateY(180deg);}
 #card-53{display: none;}
+#card-54:checked ~ .flip-container-54 .flipper {transform: rotateY(180deg);}
+#card-54{display: none;}
 .capetoso{
     align-items: center;
     border-radius: 10px;
