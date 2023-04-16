@@ -26,7 +26,7 @@ function carConteudo(){
         valor = 3;
         alert("valor baixo de mais, padrão 3 cartas entregues!");
     }
-    else if(valor>0){
+    else if(valor>15){
         if (valor != 666){
             valor = 3;
             alert(" apenas 10 para baixo, padrão 3 cartas entregues");
