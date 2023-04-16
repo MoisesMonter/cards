@@ -14,11 +14,14 @@
         <h1>Tarot</h1>
         <p>Descubra aqui o que as cartas lhe dizem</p>
     </header>
-    <main>
+    <main style="margin-top: 50px;">
         <section>
-
-            <input type="number" id="quant" name="quant" 
-            min="1" max="10">
+        <div class="puchar" >
+            <label id="inputquant">Diga quantas cartas irá puchar
+                <input type="number" id="quant" min="1" max="10" value="3"/>
+            </label>
+            
+        </div>
         <div onclick="carConteudo()" id="Deck">
 
             <button onclick="carConteudo()" id="carConteudo">Carregue</button>
@@ -27,7 +30,7 @@
             </div>
             <scripts type="text/javascript" src="js.js"></scripts>
         </div>
-        <div>
+        <div >
 
         <action id="carta"></action>
         </div>
@@ -37,9 +40,20 @@
     <main2>
     <button onclick="back()" id="back">Embaralhe</button>
 </main2>
-</body>
 <scripts type="text/javascript" src="js.js"></scripts>
+<footer style="margin-top: 255px;">
+
+<h1>Tarot</h1>
+<section>
+    <ul>
+        <li>Twiter:@xxxxxx</li>
+        <li>Instagram:@xxxxxx</li>
+        <li>Siga tambem:@xxxxxx</li>
+        <li>Whatsapp:(84)xxxx-xxxx</li>
+
+    </ul>
+</section>
+</footer>
+</body>
+
 </html>
-
-
-

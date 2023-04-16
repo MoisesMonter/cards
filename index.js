@@ -4,11 +4,13 @@ let listaNumero = ['cA','c2', 'c3', 'c4', 'c5', 'c6','c7', 'c8','c9','cx','cJ','
                     'pA','p2', 'p3', 'p4', 'p5', 'p6','p7', 'p8','p9','px','pJ','pQ','pK',
 ]
 
+
+
 function carConteudo(){
 
     const newlista =[]
-    var newhtml = ""
-    var x =0
+    var newhtml = "";
+    var x = 0;
     while (x < 20){
         newlista[x]= (Math.floor(Math.random()*52))+1
         x++;
@@ -19,15 +21,18 @@ function carConteudo(){
     /*alert(arrUnique)*/
 
     /*quantas cartas */
-    let valor = document.querySelector("#quant");
-    alert(valor)
-    for(i = 0; i<5;i++){
+    var valor = document.getElementById("quant").value;
+
+    if (valor <1){
+        valor = 3;
+        alert("valor baixo de mais, padrão 3 cartas entregues!")
+    }
+    for(i = 0; i<valor;i++){
         /*alert(i+'='+listaNumero[arrUnique[i]])*/
         /*a trás das cartas*/
         var jqk= "";
 
         var inverter= (Math.floor(Math.random()*10));
-        alert(inverter)
         if(inverter >5){
         newhtml += "<div class='campo'> <input type='checkbox' id='card-"+(i)+"' /><label class='flip-container-"+(i)+"'  for='card-"+(i)+"'><div class='flipper'><div class='back'><img src='card/back2.png' /></div>";
         }
@@ -91,15 +96,19 @@ function carConteudo(){
         }
     }
     newhtml+="</div>"/*mesa*/
-    /*alert(newhtml)*/
-    /*console.log(newhtml)*/
+
     let newcss = document.getElementById("Deck");
     newcss.style.cssText= 'display:none;';
     let carta = document.getElementById("carta");
-    carta.style.cssText = 'display:flex;'
+    carta.style.cssText = 'display:flex;';
+
     let embaralhe = document.getElementById("back")
-    embaralhe.style.cssText= 'display:flex;'
+    embaralhe.style.cssText= 'display:flex;';
+
     document.getElementById("carta").innerHTML = newhtml
+    let puche = document.getElementById("inputquant")
+    puche.style.cssText= 'display:none;';
+
 }
 
 function back(){
@@ -107,5 +116,9 @@ function back(){
     mesa.style.cssText ='display:flex;'
     let carta = document.getElementById("carta");
     carta.style.cssText = 'display:none;'
-
+    let embaralhe = document.getElementById("back")
+    embaralhe.style.cssText= 'display:none;';
+    let puche = document.getElementById("inputquant")
+    puche.style.cssText= 'display:block;';
+    
 }
