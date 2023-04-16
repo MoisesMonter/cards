@@ -94,9 +94,12 @@ label#inputquant{
     font-family: 'Times New Roman', Times, serif;
 }
 input#quant{
+    padding-top: 2%;
+    padding-bottom: 2%;
  border-radius: 10px;
  border: solid 2px rgb(244, 241, 241);
  background-color: black;
+ font-size: medium;
  color: aliceblue;
  font-family:fantasy;
 }
