@@ -404,6 +404,7 @@ div.brasao p{
 #card-52{display: none;}
 #card-53:checked ~ .flip-container-53 .flipper {transform: rotateY(180deg);}
 #card-53{display: none;}
+
 p#eegg {
     color: #20212400;
     font-size: x-small;
